@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mokio Panel — Releases</title>
+  <meta name="description" content="Browse and download Mokio apps — Wave and Arc.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="releases-page">
+  <div data-component="header"></div>
+
+  <div class="releases-layout">
+    <aside class="releases-sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="sidebar-title">
+          <img src="images/logo.svg" alt="">
+          <h2>Mokio Panel</h2>
+        </a>
+        <button type="button" class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">×</button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="sidebar-item active"><span class="sidebar-icon">⊞</span>All Apps</a>
+        <a href="apps/panel.html" class="sidebar-item"><img src="images/logo.svg" alt="" class="sidebar-app-icon">Mokio Panel</a>
+        <a href="apps/wave.html" class="sidebar-item"><img src="images/wave-logo.svg" alt="" class="sidebar-app-icon">Mokio Wave</a>
+        <a href="apps/arc.html" class="sidebar-item"><img src="images/arc-logo.svg" alt="" class="sidebar-app-icon">Mokio Arc</a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="https://mokio.online" class="sidebar-home-link">← Back to Mokio</a>
+      </div>
+    </aside>
+
+    <main class="releases-main">
+      <button type="button" class="sidebar-menu-btn" id="sidebarOpen">☰ Mokio Panel</button>
+      <div class="releases-hero">
+        <h1>Mokio Panel</h1>
+        <p>Pick an app to see what it does, how it works, its features, and download it.</p>
+      </div>
+      <div class="apps-grid">
+        <a href="apps/panel.html" class="app-card">
+          <div class="app-card-icon"><img src="images/logo.svg" alt="Mokio Panel"></div>
+          <div class="app-card-body">
+            <h3>Mokio Panel</h3>
+            <p class="app-tag">Platform</p>
+            <p class="app-desc">One place to find, download, and manage every Mokio app.</p>
+            <span class="app-status status-soon">Almost there!</span>
+          </div>
+          <span class="app-card-arrow">→</span>
+        </a>
+        <a href="apps/wave.html" class="app-card">
+          <div class="app-card-icon"><img src="images/wave-logo.svg" alt="Mokio Wave"></div>
+          <div class="app-card-body">
+            <h3>Mokio Wave</h3>
+            <p class="app-tag">Music</p>
+            <p class="app-desc">Discover, make, and share music with built-in creator tools and a clean interface.</p>
+            <span class="app-status status-soon">Coming Soon</span>
+          </div>
+          <span class="app-card-arrow">→</span>
+        </a>
+        <a href="apps/arc.html" class="app-card">
+          <div class="app-card-icon"><img src="images/arc-logo.svg" alt="Mokio Arc"></div>
+          <div class="app-card-body">
+            <h3>Mokio Arc</h3>
+            <p class="app-tag">Messaging</p>
+            <p class="app-desc">Fast, modern messaging built to grow into games and mods.</p>
+            <span class="app-status status-soon">Coming Soon</span>
+          </div>
+          <span class="app-card-arrow">→</span>
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <div data-component="auth-modal"></div>
+  <div data-component="footer"></div>
+
+  <script src="script/components.js"></script>
+  <script src="script/script.js"></script>
+</body>
+</html>
