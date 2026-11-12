@@ -1,8 +1,9 @@
-/* Shared header, footer and account modal — mirrors mokio.online */
+/* ============================================================
+   Code duplicated as needed.
+   ============================================================ */
 (function () {
   const me = document.currentScript;
-  const ROOT = me && me.src ? me.src.replace(/script\/components\.js[^/]*$/, '') : '/';
-  const MAIN = 'https://mokio.online/';
+  const ROOT = me && me.src ? me.src.replace(/components\.js[^/]*$/, '') : '/';
   const DONATE = 'https://www.paypal.com/donate/?hosted_button_id=9AZPTK7UAUQBL';
 
   const AUTH_MODAL = `
@@ -12,7 +13,7 @@
 
       <div id="authGuest">
         <div class="auth-brand">
-          <img src="${ROOT}images/logo.svg" alt="" class="auth-logo">
+          <img src="${ROOT}../images/logo.svg" alt="" class="auth-logo">
           <h2 id="authTitle">Welcome back</h2>
           <p class="auth-sub" id="authSub">Sign in to your Mokio account.</p>
         </div>
@@ -49,59 +50,43 @@
   </div>
 `;
 
-  const HEADER = `
-  <header class="nav">
-    <div class="container nav-inner">
-      <a href="${MAIN}" class="logo">
-        <img src="${ROOT}images/logo.svg" alt="Mokio" class="logo-img">
-        <span class="logo-text">Mokio</span>
-      </a>
-      <nav class="nav-links">
-        <a href="${MAIN}#features">Features</a>
-        <a href="${MAIN}#vision">Vision</a>
-        <a href="${MAIN}#waitlist" class="btn btn-small">Join Waitlist</a>
-      </nav>
-      <div class="nav-right">
-        <a href="${DONATE}" class="donate-btn" target="_blank" rel="noopener">Donate</a>
-        <button type="button" class="account-btn" id="accountBtn">
-          <span class="account-btn-icon">M</span>
-          <span id="accountBtnText">Sign In</span>
-        </button>
-        <button class="mobile-menu-btn" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>`;
-
-  const FOOTER = `
-  <footer class="footer">
-    <div class="container footer-inner">
+  const logoBlock = `
       <div class="footer-brand">
-        <a href="${MAIN}" class="logo">
-          <img src="${ROOT}images/logo.svg" alt="Mokio" class="logo-img">
+        <a href="${ROOT}index.html" class="logo">
+          <img src="${ROOT}../images/logo.svg" alt="Mokio" class="logo-img">
           <span class="logo-text">Mokio</span>
         </a>
         <p>Play. Connect. Create.</p>
-      </div>
-      <div class="footer-links">
-        <a href="${MAIN}">Home</a>
-        <a href="${MAIN}#features">Features</a>
-        <a href="${MAIN}pages/music.html">Music</a>
-        <a href="${MAIN}pages/messaging.html">Messaging</a>
-        <a href="${MAIN}#waitlist">Waitlist</a>
-        <a href="${DONATE}" target="_blank" rel="noopener">Donate</a>
-      </div>
+      </div>`;
+  const bottomBlock = `
       <div class="footer-bottom">
         <p>© 2026 Mokio. All rights reserved.</p>
-      </div>
+      </div>`;
+
+  const footer = (variant) => {
+    const lastLink = variant === 'staff'
+      ? `<a href="${ROOT}pages/portal.html">Portal</a>`
+      : `<a href="${ROOT}index.html#waitlist">Waitlist</a>`;
+    const links = variant === 'minimal' ? '' : `
+      <div class="footer-links">
+        <a href="${ROOT}index.html">Home</a>
+        <a href="${ROOT}index.html#features">Features</a>
+        <a href="https://app.mokio.online">Apps</a>
+        <a href="${ROOT}pages/music.html">Music</a>
+        <a href="${ROOT}pages/messaging.html">Messaging</a>
+        ${lastLink}
+        <a href="${DONATE}" target="_blank" rel="noopener">Donate</a>
+      </div>`;
+    return `
+  <footer class="footer">
+    <div class="container footer-inner">${logoBlock}${links}${bottomBlock}
     </div>
   </footer>`;
+  };
 
   const COMPONENTS = {
-    'header': () => HEADER,
     'auth-modal': () => AUTH_MODAL,
-    'footer': () => FOOTER
+    'footer': (el) => footer(el.dataset.variant || 'default')
   };
 
   document.querySelectorAll('[data-component]').forEach((el) => {
