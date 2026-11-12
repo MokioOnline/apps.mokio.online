@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blitz — Mokio Panel</title>
+  <meta name="description" content="Blitz — a clean Minecraft launcher with instances, mods, and quick play.">
+  <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="releases-page">
+  <div data-component="header"></div>
+
+  <div class="releases-layout">
+    <aside class="releases-sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-title">
+          <img src="../images/logo.svg" alt="">
+          <h2>Mokio Panel</h2>
+        </a>
+        <button type="button" class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">×</button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="../index.html" class="sidebar-item"><span class="sidebar-icon">⊞</span>All Apps</a>
+        <a href="../apps/panel.html" class="sidebar-item"><img src="../images/logo.svg" alt="" class="sidebar-app-icon">Mokio Panel</a>
+        <a href="../apps/wave.html" class="sidebar-item"><img src="../images/wave-logo.svg" alt="" class="sidebar-app-icon">Mokio Wave</a>
+        <a href="../apps/arc.html" class="sidebar-item"><img src="../images/arc-logo.svg" alt="" class="sidebar-app-icon">Mokio Arc</a>
+        <a href="../apps/blitz.html" class="sidebar-item active"><img src="../images/blitz-logo.png" alt="" class="sidebar-app-icon">Blitz</a>
+        <a href="../apps/crossfire.html" class="sidebar-item"><img src="../images/crossfire-logo.png" alt="" class="sidebar-app-icon">Crossfire</a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="https://mokio.online" class="sidebar-home-link">← Back to Mokio</a>
+      </div>
+    </aside>
+
+    <main class="releases-main">
+      <button type="button" class="sidebar-menu-btn" id="sidebarOpen">☰ Mokio Panel</button>
+      <div class="app-detail">
+        <div class="app-detail-header">
+          <div class="app-detail-icon"><img src="../images/blitz-logo.png" alt="Blitz"></div>
+          <div class="app-detail-meta">
+            <h1>Blitz</h1>
+            <p class="app-tag">Minecraft</p>
+            <span class="app-status status-soon">Coming Soon</span>
+          </div>
+        </div>
+
+        <section class="app-detail-section" id="about">
+          <h2>What is Blitz?</h2>
+          <p>Blitz is a Minecraft launcher built for people who want instances, mods, and quick play without the clutter. Manage versions, load modpacks, and jump into a world from one clean panel.</p>
+        </section>
+
+        <section class="app-detail-section" id="download">
+          <div class="download-box">
+            <div>
+              <h2>Download Blitz</h2>
+              <p>No public build yet — the download will unlock here when Blitz launches.</p>
+            </div>
+            <a href="#" class="btn btn-primary download-btn is-disabled" aria-disabled="true" data-app="blitz">⬇ Download</a>
+          </div>
+        </section>
+
+        <section class="app-detail-section" id="what-it-does">
+          <h2>What it does</h2>
+          <ul>
+            <li>Install and switch Minecraft versions in one place</li>
+            <li>Create isolated instances for vanilla, modded, or snapshot play</li>
+            <li>Add mods and modpacks without digging through folders</li>
+            <li>Keep accounts and settings organized per instance</li>
+            <li>Launch straight into the game with one click</li>
+          </ul>
+        </section>
+
+        <section class="app-detail-section" id="how-it-works">
+          <h2>How it works</h2>
+          <div class="steps">
+            <div class="step"><div>
+              <h3>Set up</h3>
+              <p>Sign in and create an instance for the version or modpack you want to play.</p></div></div>
+            <div class="step"><div>
+              <h3>Customize</h3>
+              <p>Drop in mods, resource packs, and JVM settings that stay tied to that instance.</p></div></div>
+            <div class="step"><div>
+              <h3>Launch</h3>
+              <p>Hit play — Blitz handles the rest so you can get into the world faster.</p></div></div>
+          </div>
+        </section>
+
+        <section class="app-detail-section" id="features">
+          <h2>Features</h2>
+          <div class="feature-tiles">
+            <div class="feature-tile"><h3>Instances</h3><p>Separate profiles for each world style or mod setup.</p></div>
+            <div class="feature-tile"><h3>Mod-friendly</h3><p>Install and update mods without breaking other instances.</p></div>
+            <div class="feature-tile"><h3>Clean UI</h3><p>Focus on play, not menus buried three layers deep.</p></div>
+            <div class="feature-tile"><h3>Fast start</h3><p>Recent instances and one-click launch keep you in the game.</p></div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div data-component="auth-modal"></div>
+  <div data-component="footer"></div>
+
+  <script src="../script/components.js"></script>
+  <script src="../script/script.js"></script>
+</body>
+</html>

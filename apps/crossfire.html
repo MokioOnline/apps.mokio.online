@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crossfire — Mokio Panel</title>
+  <meta name="description" content="Crossfire — one launcher for games from Steam, Xbox, and more.">
+  <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="releases-page">
+  <div data-component="header"></div>
+
+  <div class="releases-layout">
+    <aside class="releases-sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-title">
+          <img src="../images/logo.svg" alt="">
+          <h2>Mokio Panel</h2>
+        </a>
+        <button type="button" class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">×</button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="../index.html" class="sidebar-item"><span class="sidebar-icon">⊞</span>All Apps</a>
+        <a href="../apps/panel.html" class="sidebar-item"><img src="../images/logo.svg" alt="" class="sidebar-app-icon">Mokio Panel</a>
+        <a href="../apps/wave.html" class="sidebar-item"><img src="../images/wave-logo.svg" alt="" class="sidebar-app-icon">Mokio Wave</a>
+        <a href="../apps/arc.html" class="sidebar-item"><img src="../images/arc-logo.svg" alt="" class="sidebar-app-icon">Mokio Arc</a>
+        <a href="../apps/blitz.html" class="sidebar-item"><img src="../images/blitz-logo.png" alt="" class="sidebar-app-icon">Blitz</a>
+        <a href="../apps/crossfire.html" class="sidebar-item active"><img src="../images/crossfire-logo.png" alt="" class="sidebar-app-icon">Crossfire</a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="https://mokio.online" class="sidebar-home-link">← Back to Mokio</a>
+      </div>
+    </aside>
+
+    <main class="releases-main">
+      <button type="button" class="sidebar-menu-btn" id="sidebarOpen">☰ Mokio Panel</button>
+      <div class="app-detail">
+        <div class="app-detail-header">
+          <div class="app-detail-icon"><img src="../images/crossfire-logo.png" alt="Crossfire"></div>
+          <div class="app-detail-meta">
+            <h1>Crossfire</h1>
+            <p class="app-tag">Games</p>
+            <span class="app-status status-soon">Coming Soon</span>
+          </div>
+        </div>
+
+        <section class="app-detail-section" id="about">
+          <h2>What is Crossfire?</h2>
+          <p>Crossfire is a unified game launcher. Bring together libraries from Steam, Xbox, and other platforms so you can browse, filter, and launch games from one place instead of hopping between apps.</p>
+        </section>
+
+        <section class="app-detail-section" id="download">
+          <div class="download-box">
+            <div>
+              <h2>Download Crossfire</h2>
+              <p>No public build yet — the download will unlock here when Crossfire launches.</p>
+            </div>
+            <a href="#" class="btn btn-primary download-btn is-disabled" aria-disabled="true" data-app="crossfire">⬇ Download</a>
+          </div>
+        </section>
+
+        <section class="app-detail-section" id="what-it-does">
+          <h2>What it does</h2>
+          <ul>
+            <li>Connect Steam, Xbox, and other game libraries in one panel</li>
+            <li>Browse your full collection without opening each store app</li>
+            <li>Launch games straight from Crossfire</li>
+            <li>Filter by platform, play status, or genre</li>
+            <li>Keep friends activity and recent games visible at a glance</li>
+          </ul>
+        </section>
+
+        <section class="app-detail-section" id="how-it-works">
+          <h2>How it works</h2>
+          <div class="steps">
+            <div class="step"><div>
+              <h3>Link libraries</h3>
+              <p>Connect your Steam, Xbox, and other accounts so Play can see what you own.</p></div></div>
+            <div class="step"><div>
+              <h3>Browse everything</h3>
+              <p>Your games show up in one library — search, sort, and pin favorites.</p></div></div>
+            <div class="step"><div>
+              <h3>Launch</h3>
+              <p>Start a game from Play; it hands off to the right platform client when needed.</p></div></div>
+          </div>
+        </section>
+
+        <section class="app-detail-section" id="features">
+          <h2>Features</h2>
+          <div class="feature-tiles">
+            <div class="feature-tile"><h3>Multi-platform</h3><p>Steam, Xbox, and more — one launcher surface.</p></div>
+            <div class="feature-tile"><h3>Unified library</h3><p>See every game you own without juggling clients.</p></div>
+            <div class="feature-tile"><h3>Quick launch</h3><p>Start titles from a single list, not five different apps.</p></div>
+            <div class="feature-tile"><h3>Clean control</h3><p>Filters and favorites keep a big library easy to use.</p></div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div data-component="auth-modal"></div>
+  <div data-component="footer"></div>
+
+  <script src="../script/components.js"></script>
+  <script src="../script/script.js"></script>
+</body>
+</html>

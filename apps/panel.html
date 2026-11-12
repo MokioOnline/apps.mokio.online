@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mokio Panel — Mokio Panel</title>
+  <meta name="description" content="Mokio Panel — one place to find, download, and manage every Mokio app.">
+  <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="releases-page">
+  <div data-component="header"></div>
+
+  <div class="releases-layout">
+    <aside class="releases-sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-title">
+          <img src="../images/logo.svg" alt="">
+          <h2>Mokio Panel</h2>
+        </a>
+        <button type="button" class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">×</button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="../index.html" class="sidebar-item"><span class="sidebar-icon">⊞</span>All Apps</a>
+        <a href="../apps/panel.html" class="sidebar-item active"><img src="../images/logo.svg" alt="" class="sidebar-app-icon">Mokio Panel</a>
+        <a href="../apps/wave.html" class="sidebar-item"><img src="../images/wave-logo.svg" alt="" class="sidebar-app-icon">Mokio Wave</a>
+        <a href="../apps/arc.html" class="sidebar-item"><img src="../images/arc-logo.svg" alt="" class="sidebar-app-icon">Mokio Arc</a>
+        <a href="../apps/blitz.html" class="sidebar-item"><img src="../images/blitz-logo.png" alt="" class="sidebar-app-icon">Blitz</a>
+        <a href="../apps/crossfire.html" class="sidebar-item"><img src="../images/crossfire-logo.png" alt="" class="sidebar-app-icon">Crossfire</a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="https://mokio.online" class="sidebar-home-link">← Back to Mokio</a>
+      </div>
+    </aside>
+
+    <main class="releases-main">
+      <button type="button" class="sidebar-menu-btn" id="sidebarOpen">☰ Mokio Panel</button>
+      <div class="app-detail">
+        <div class="app-detail-header">
+          <div class="app-detail-icon"><img src="../images/logo.svg" alt="Mokio Panel"></div>
+          <div class="app-detail-meta">
+            <h1>Mokio Panel</h1>
+            <p class="app-tag">Platform</p>
+            <span class="app-status status-soon">Almost there!</span>
+          </div>
+        </div>
+
+
+        <section class="app-detail-section" id="about">
+          <h2>What is Mokio Panel?</h2>
+          <p>Mokio Panel is the home for every Mokio app. Instead of hunting for separate downloads, you open Panel to find, install, and keep your Mokio apps up to date in one place.</p>
+        </section>
+
+        <section class="app-detail-section" id="download">
+          <div class="download-box">
+            <div>
+              <h2>Download Mokio Panel</h2>
+              <p>No public build yet — the download will unlock here when Mokio Panel launches.</p>
+            </div>
+            <!-- When a build is ready: set href to the file URL and remove class "is-disabled" and aria-disabled -->
+            <a href="#" class="btn btn-primary download-btn is-disabled" aria-disabled="true" data-app="panel">⬇ Download</a>
+          </div>
+        </section>
+
+        <section class="app-detail-section" id="what-it-does">
+          <h2>What it does</h2>
+          <ul>
+            <li>Browse every Mokio app</li>
+            <li>Download and install apps from one place</li>
+            <li>Keep your installed Mokio apps organized and up to date</li>
+            <li>Connect each app to the same Mokio experience</li>
+            <li>Open a browser, test code</li>
+          </ul>
+        </section>
+
+        <section class="app-detail-section" id="how-it-works">
+          <h2>How it works</h2>
+          <div class="steps"><div class="step">
+            <div>
+            <h3>Open Panel</h3>
+            <p>Launch Mokio Panel to see all available Mokio apps.</p></div></div>
+        <div class="step"><div>
+          <h3>Pick an app</h3>
+          <p>Choose Mokio Wave or Mokio Arc to see what it does.</p></div></div>
+          <div class="step"><div>
+            <h3>Install</h3>
+            <p>Download and install the app straight from Panel.</p></div></div>
+          <div class="step"><div>
+            <h3>Stay current</h3>
+            <p>New apps and releases show up in Panel as Mokio grows.</p></div></div></div>
+        </section>
+
+        <section class="app-detail-section" id="features">
+          <h2>Features</h2>
+          <div class="feature-tiles">
+            <div class="feature-tile">
+              <h3>All apps in one place</h3>
+              <p>Wave, Arc, and future Mokio products live under one roof.</p></div>
+            <div class="feature-tile">
+              <h3>Simple downloads</h3>
+              <p>One download button per app, no searching around.</p></div>
+            <div class="feature-tile">
+              <h3>Built for expansion</h3>
+              <p>New apps and mods will appear in Panel as the platform grows.</p></div>
+            <div class="feature-tile">
+              <h3>Connected to Mokio</h3>
+              <p>Part of the unified Mokio platform and shared experience.</p></div>
+            <div class="feature-tile">
+              <h3>Browse</h3>
+              <p>Open your favorite browser and search the web.</p></div>
+            <div class="feature-tile">
+              <h3>Customize</h3>
+              <p>Customize your Mokio experience by limiting app usage or creating custom workflows and designs.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div data-component="auth-modal"></div>
+  <div data-component="footer"></div>
+
+  <script src="../script/components.js"></script>
+  <script src="../script/script.js"></script>
+</body>
+</html>
